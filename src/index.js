@@ -1,27 +1,20 @@
 exports.min = function min(array) {
-  if (array.length == 0) {
-    return Math.min.apply(null, array);
-  } else {
+  if (array == undefined || array == null || array.length == 0) {
     return 0;
   }
+    return Math.min.apply(null, array);
 }
 
 exports.max = function max(array) {
-  if (array.length == 0) {
-    return Math.max.apply(null, array);
-  } else {
+  if (array == undefined || array == null || array.length == 0) {
     return 0;
   }
+    return Math.max.apply(null, array);
 }
 
 exports.avg = function avg(array) {
-  if (array.length == 0) {
-    return array.reduce((a, b) => a + b) / array.length;
-  } else {
+  if (array == undefined || array == null || array.length == 0) {
     return 0;
   }
+    return array.reduce((a, b) => a + b) / array.length;
 }
-
-min(1, 2, 3, 4);
-max(1, 2, 3, 4);
-avg(1, 2, 3, 4);
